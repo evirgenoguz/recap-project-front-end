@@ -1,0 +1,18 @@
+<div *ngIf= "dataLoaded == false" class="spinner-border text-success" role="status">
+    <span class="visually-hidden"></span>
+  </div>
+  
+  <table *ngIf= "dataLoaded == true" class="table">
+    <thead>
+      <tr>
+        <th>Kiralama Id</th>
+        <th>Marka</th>
+        <th>Kiralayan</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let rental of rentals">
+      <td>{{rental.rentalId}}</td>
+      <td>{{rental.brandName}}</td>
+      <td>{{rental.firstName + "  " +  rental.lastName}}</td>
+    </tr>
+  </table>
