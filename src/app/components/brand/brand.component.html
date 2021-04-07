@@ -5,5 +5,6 @@
 
 <ul *ngIf="dataLoaded == true" class="list-group m-3">
   <li *ngFor="let brand of brands" class = "list-group-item">
-    <a href="#" class="p-auto">{{brand.brandName}}</a></li>
+    {{brand.brandName}}  
+  </li>
 </ul>
