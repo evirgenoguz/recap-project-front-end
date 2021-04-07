@@ -1,7 +1,9 @@
-<ul class="list-group ">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+<div *ngIf= "dataLoaded == false" class="spinner-border text-primary" role="status">
+  <span class="visually-hidden"></span>
+</div>
+
+
+<ul *ngIf="dataLoaded == true" class="list-group m-3">
+  <li *ngFor="let brand of brands" class = "list-group-item">
+    <a href="#" class="p-auto">{{brand.brandName}}</a></li>
 </ul>

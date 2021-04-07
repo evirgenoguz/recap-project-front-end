@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { BrandComponent } from './components/brand/brand.component';
 import { ColorComponent } from './components/color/color.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,7 +19,9 @@ import { ColorComponent } from './components/color/color.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
